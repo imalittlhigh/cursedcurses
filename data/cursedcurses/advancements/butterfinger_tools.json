@@ -1,0 +1,28 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:item_durability_changed",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:all_of",
+              "terms": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.1
+                }
+              ]
+            }
+          ],
+          "item": {
+            "tag": "cursedcurses:tools",
+            "nbt": "{butterfinger:1b}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "cursedcurses:active_curses/butterfinger"
+    }
+  }
+  

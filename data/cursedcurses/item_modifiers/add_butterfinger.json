@@ -1,0 +1,71 @@
+[
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{cursed:1b,butterfinger:1b}",
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "nbt": "{butterfinger:1b}"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{Enchantments:[{}]}",
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "nbt": "{Enchantments:[{}]}"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "function": "minecraft:set_lore",
+      "entity": "this",
+      "lore": [
+        {
+          "text": "Curse of the Butterfinger",
+          "color": "red",
+          "italic": false
+        }
+      ],
+      "replace": false,
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "nbt": "{butterfinger:1b}"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+  
