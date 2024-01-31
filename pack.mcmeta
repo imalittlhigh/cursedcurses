@@ -1,6 +1,21 @@
 {
 	"pack": {
-		"pack_format": 15,
-		"description": "Cursed Curses by imalittlhigh"
+	  "pack_format": 26,
+	  "description": {
+		"text": "Cursed Curses",
+		"color": "gold",
+		"extra": [
+		  {
+			"text": " by ",
+			"color": "aqua"
+		  },
+		  {
+			"text": "imalittlhigh",
+			"color": "gold",
+			"italic": true
+		  }
+		]
+	  }
 	}
-}
+  }
+  
