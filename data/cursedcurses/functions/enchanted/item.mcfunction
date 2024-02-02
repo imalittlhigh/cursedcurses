@@ -19,8 +19,8 @@ execute store result storage cursedcurses:var rand int 1 run scoreboard players 
 #calling macro function to get a slot in inventory
 function cursedcurses:select_slot/get_slot with storage cursedcurses:var
 #if an item has been cursed, or more than 30 slots have been checked, dont rerun this function to repick another slot
-execute unless score %cursed cursedcurses_dummy matches 1 unless score %breakout cursedcurses_dummy matches 30.. run function cursedcurses:enchanted/item
+execute unless score %cursed cursedcurses_dummy matches 1 unless score %breakout cursedcurses_dummy matches 50.. run function cursedcurses:enchanted/item
 #if item has been cursed, reset the breakout score for this loop function
 execute if score %cursed cursedcurses_dummy matches 1 run scoreboard players reset %breakout cursedcurses_dummy
 #if breakout has been reached, reset the breakout score for this loop function
-execute if score %breakout cursedcurses_dummy matches 30.. run scoreboard players reset %breakout cursedcurses_dummy
+execute if score %breakout cursedcurses_dummy matches 50.. run scoreboard players reset %breakout cursedcurses_dummy

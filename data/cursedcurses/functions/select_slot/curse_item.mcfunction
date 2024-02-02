@@ -22,4 +22,4 @@ execute if score %curse cursedcurses_dummy matches 26..38 run item modify entity
 scoreboard players set %cursed cursedcurses_dummy 1
 
 #playing sound if curse wants to be applied
-playsound entity.witch.celebrate ambient @a ~ ~ ~ 0.5 1.2 0.1
+execute if predicate cursedcurses:trigger_sound run playsound entity.witch.celebrate ambient @a ~ ~ ~ 0.5 1.2 0.1
