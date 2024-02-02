@@ -4,23 +4,17 @@
     "enchantments": {
       "minecraft:mending": -1
     },
-    "add": true},
-  {
-    "function": "minecraft:set_enchantments",
-    "enchantments": {
-      "minecraft:protection": 5
-    },
-    "add": false,
+    "add": true,
     "conditions": [
       {
         "condition": "minecraft:inverted",
-          "term": {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "equipment": {
-                "mainhand": {
-                  "nbt": "{rock_golem:1b}"
+        "term": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "nbt": "{rock_golem:1b}"
               }
             }
           }
@@ -29,8 +23,37 @@
     ]
   },
     {
+      "function": "minecraft:set_attributes",
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.armor",
+          "name": "minecraft:generic.armor",
+          "amount": 5,
+          "operation": "addition",
+          "slot": "legs"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "nbt": "{rock_golem:1b}"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+ 
+    {
       "function": "minecraft:set_nbt",
-      "tag": "{cursed:1b,rock_golem:1b,RepairCost:40}",
+      "tag": "{cursed:1b,rock_golem:1b,RepairCost:69}",
       "conditions": [
         {
           "condition": "minecraft:inverted",
@@ -69,6 +92,26 @@
               "equipment": {
                 "mainhand": {
                   "nbt": "{rock_golem:1b}"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{Enchantments:[{}]}",
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "nbt": "{Enchantments:[{}]}"
                 }
               }
             }

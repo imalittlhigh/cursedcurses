@@ -1,0 +1,15 @@
+[
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:fortune": 5
+    },
+    "add": false},
+  {
+  "function": "minecraft:set_enchantments",
+  "enchantments": {
+    "minecraft:silk_touch": -1
+  }
+    }
+  ]
+  
