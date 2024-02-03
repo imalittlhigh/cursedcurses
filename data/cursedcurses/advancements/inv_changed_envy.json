@@ -1,0 +1,18 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "nbt": "{cursed:1b,envy:1b}"
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "function": "cursedcurses:recurse/envy"
+    }
+  }
+  

@@ -1,0 +1,18 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "nbt": "{cursed:1b,rock_golem:1b}"
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "function": "cursedcurses:recurse/rock_golem"
+    }
+  }
+  

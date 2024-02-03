@@ -33,7 +33,7 @@ execute if score %rand cursedcurses_dummy matches 39 run item replace entity @s 
 execute if score %rand cursedcurses_dummy matches 40 run item replace entity @s weapon.mainhand from entity @s weapon.offhand
 
 #if the item in the selected slot is enchantable, and if the chance to curse triggers, run the function to cuse the item
-execute if predicate cursedcurses:enchantable if predicate cursedcurses:curse run function cursedcurses:select_slot/curse_item
+execute if predicate cursedcurses:enchantable run function cursedcurses:select_slot/curse_item
 
 #returning the item from mainhand to selected inventory slot to not change or override player inventory (with macros)
 $execute if score %rand cursedcurses_dummy matches 0..26 run item replace entity @s inventory.$(rand) from entity @s weapon.mainhand

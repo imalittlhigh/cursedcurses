@@ -14,7 +14,7 @@ execute if score %curse cursedcurses_dummy matches 1..10 run item modify entity 
 #applying dwarf curse to the item selected if item is tool
 execute if score %curse cursedcurses_dummy matches 11..15 if predicate cursedcurses:tool run item modify entity @s weapon.mainhand cursedcurses:add_dwarf
 #applying rock golem curse to the item selected if item is armor
-execute if score %curse cursedcurses_dummy matches 16..25 if predicate cursedcurses:armor run item modify entity @s weapon.mainhand cursedcurses:add_rock_golem
+execute if score %curse cursedcurses_dummy matches 16..25 if predicate cursedcurses:armor run function cursedcurses:select_slot/curse/armor
 #applying butterfinger curse to the item selected
 execute if score %curse cursedcurses_dummy matches 26..38 run item modify entity @s weapon.mainhand cursedcurses:add_butterfinger
 
@@ -22,4 +22,4 @@ execute if score %curse cursedcurses_dummy matches 26..38 run item modify entity
 scoreboard players set %cursed cursedcurses_dummy 1
 
 #playing sound if curse wants to be applied
-playsound entity.witch.celebrate ambient @a ~ ~ ~ 0.5 1.2 0.1
+execute if predicate cursedcurses:trigger_sound run playsound entity.witch.celebrate ambient @a ~ ~ ~ 0.5 1.2 0.1
