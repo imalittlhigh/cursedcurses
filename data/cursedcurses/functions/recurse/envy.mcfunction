@@ -7,7 +7,6 @@
 #removing triggering advancement
 advancement revoke @s only cursedcurses:inv_changed_envy
 
-say moved envy
 #checking whole inventory if item is cursed, and still has the cursed attributes (enchanted....) if not, add it again using item modifier (not commenting every line here ^^)
 execute if data entity @s Inventory[{Slot:0b}].tag.envy unless data entity @s Inventory[{Slot:0b}].tag.Enchantments run item modify entity @s hotbar.0 cursedcurses:recurse/envy
 execute if data entity @s Inventory[{Slot:1b}].tag.envy unless data entity @s Inventory[{Slot:1b}].tag.Enchantments run item modify entity @s hotbar.1 cursedcurses:recurse/envy
